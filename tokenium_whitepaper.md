@@ -126,6 +126,16 @@ It would be hard to write a detailed roadmap at this point yet, but here are the
 * We will develop an exchange server. Although we hope that third parties will develop more awesome exchange servers than us, we have to make sure that there is at least one Tokenium exchange server developed as fast as possible. As this server will be open source, anyone can start to host an exchange server without developing one! 
 * Exchange auditing service, adding exchange auditing elements to the Tokenium protocol to be able to detect malicious exchanges.
 
+## Contact
+
+* Twitter: [https://twitter.com/TokeniumNetwork](https://twitter.com/TokeniumNetwork "TokeniumNetwork") 
+* Website: to be deployed (tokenium.org)
+
+* Founder: Ádám Nagy
+* LinkedIn: [https://www.linkedin.com/in/adam-nagy-03575834/](https://www.linkedin.com/in/adam-nagy-03575834/ "Ádám Nagy")
+* email: nadam60@gmail.com
+
+
 ## Appendix: Tokenium Smart Contract
 
 Coming soon...
