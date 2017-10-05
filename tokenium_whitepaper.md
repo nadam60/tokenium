@@ -51,7 +51,7 @@ It drives the Tokenium protocol and provides its trust guarantees.
 
 Below comes a relatively detailed discussion of the protocol, but it is not as detailed as the documentation of the standard that we are working on. This whitepaper is meant to have and understanding of the protocol. 
 
-Please not that the core of the protocol is simple: it is relatively simple to guarante no reserve loss and no trade below price limit. The complexities are there to prevent more nunaced attacks which are mostly:
+Please note that the core of the protocol is simple: it is relatively simple to guarante no reserve loss and no trade below price limit. The complexities are there to prevent more nunaced attacks which are mostly:
 
 * DDOS-ing
 * providing incorrect information
@@ -121,7 +121,7 @@ Please note that the number of submissions sent to the server is minimized to sa
 
 Fee will be part of the order datastructure.
 
-We create a new token for Tokenium. Fees are denominated in this token and is payed by the `submit` method: 95% goes to the exchange account and 5% to the Tokenium tem's address. The reason for the 5% is that is to secure Tokenium development in the far future, when the team can no longer rely on the token sale money. 
+We create a new token for Tokenium. Fees are denominated in this token and is payed by the `submit` method: 95% goes to the exchange account and 5% to the Tokenium team's address. The reason for the 5% is that is to secure Tokenium development in the far future, when the team can no longer rely on the token sale money. 
 
 ### Gas considerations
 
