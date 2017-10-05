@@ -66,7 +66,7 @@ The 3 main actors in the Tokenium protocol are the **client**, the **server** an
 * The protocol gurantees the following in case of a **dishonest server**:
 	* Only tokens in the *reserve* can be ever traded.
 	* The client can request so-called *emergency unreserve* anytime (usually in practice this should only be done when the client detects dishonest or erronous behaviour from the server), and it will be guranteedly done on the blockchain in a defined amount of ethereum steps: untraded reserves guaranteedly go back to the users wallet.
-	* Trades will only be done in the limit specified by the client.
+	* Trades will only be ever done in the price limit specified by the client.
 	* The client can detect if the server does not cancel the cancelled trade orders on the blockchain and can request an emergency unreserve in that case. It is guaranteed by the smart contract that trade orders cancelled on the blockchain can no longer be used.
 
 The playground for making some loss for a user by a server is extremely limited, and even most of it is automatically detected in the client software, so the reputation of the server can be instantly lost. 
