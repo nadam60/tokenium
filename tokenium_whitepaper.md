@@ -49,7 +49,7 @@ It drives the Tokenium protocol and provides its trust guarantees.
 
 ## Tokenium Protocol Details
 
-Below comes a relatively detailed discussion of the protocol, but it is not as detailed as the documentation of the standard that we are working on. This whitepaper is meant to have and understanding of the protocol. 
+Below comes a relatively detailed discussion of the protocol, but it is not as detailed as the documentation of the standard that we are working on. This whitepaper is meant to have an understanding of the protocol. 
 
 Please note that the core of the protocol is simple: it is relatively simple to guarante no reserve loss and no trade below price limit. The complexities are there to prevent more nunaced attacks which are mostly:
 
@@ -62,8 +62,8 @@ Please note that the core of the protocol is simple: it is relatively simple to 
 The 3 main actors in the Tokenium protocol are the **client**, the **server** and the **smart contract**.
 
 * The smart contract is immutable and always behaves correctly.
-* The protocol fully protects other clients and the server from a dishonest client.
-* The protocol gurantees the following in case of a dishonest server:
+* The protocol fully protects other clients and the server from a **dishonest client**.
+* The protocol gurantees the following in case of a **dishonest server**:
 	* Only tokens in the *reserve* can be ever traded.
 	* The client can request so-called *emergency unreserve* anytime (usually in practice this should only be done when the client detects dishonest or erronous behaviour from the server), and it will be guranteedly done on the blockchain in a defined amount of ethereum steps: untraded reserves guaranteedly go back to the users wallet.
 	* Trades will only be done in the limit specified by the client.
