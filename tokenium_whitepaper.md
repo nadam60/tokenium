@@ -77,7 +77,7 @@ When the user wants to trade token `A` for token `B` on exchange `E`, the first 
 
 	uint Tokenium.reserve(address token, uint amount, address exchange)
 
-This will not actually move tokens to the exchange address: The funds are just temporarily moved to the Tokenium contract, and the contract remembers that the fund is locked for usage on `E` until the reservation expires.
+This will not actually move tokens to the exchange address: The funds are just temporarily moved to the Tokenium contract, and the contract remembers that the fund is locked for usage on `E` until an *unreserve*.
 
 This reservation is needed to prevent the attack when a disthonest client wants to attack the honest server and clients. To prevent this kind of attack, the exchange have to be sure that the order of a client has a reserve, so the user cannot spend the tokens on the Ethereum network meanwhile the order-matching algorithm runs inside the exchange.
 
