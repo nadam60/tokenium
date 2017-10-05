@@ -51,6 +51,12 @@ It drives the Tokenium protocol and provides its trust guarantees.
 
 Below comes a relatively detailed discussion of the protocol, but it is not as detailed as the documentation of the standard that we are working on. This whitepaper is meant to have and understanding of the protocol. 
 
+Please not that the core of the protocol is simple: it is relatively simple to guarante no reserve loss and no trade below price limit. The complexities are there to prevent more nunaced attacks which are mostly:
+
+* DDOS-ing
+* providing incorrect information
+* trying to elongate the time range of an order in the hope of using price fluctuations to have gains. 
+
 ### Guarantees of the protocol
 
 The 3 main actors in the Tokenium protocol are the **client**, the **server** and the **smart contract**.
@@ -107,9 +113,9 @@ The server collects real-time what kind of submissions it will do to the smart c
 
 The client tracks this list and will detect if not the exact same things have been submitted to the smart contract by constantly monitoring the smart contract. This monitoring is done by a kind of blockchain algorithm. For each submission a hash is calculated from some part of the submission data + the previous hash. Only the current hash is stored in the smart contract. The client will read this hash constantly, will look it up in its own promise list where it also calculated the hashes, and if the lookup is not successful, or there is no progress for a certain amount of time, then the client will report to the user that there is a problem with the server, so that the user can do an emergency unreserve. 
 
-It can be seen that the server can only lie with its promises only for a small amount of time, and after that not only the client will do emergency unreserve, but the server will probably lose its reputation too.
+It can be seen that the server can only lie with its promises only for a small amount of time, and after that not only the client will do emergency unreserve, but the server will probably lose its reputation too. (And remember: even if the server lies the guarantees listed in the gurantee list in this paper are always still true, so no loss of reserves and no trade outside specified order price limit.)
 
-Please note that the number of submissions sent to the server is minimized. As only one order can be active in a reserve session at a time, each order can be represented with a serial number (`in_session_order_index`), the `cancel` command can be represented with just one number: orders up until this number are not active anymore. Multiple fast cancels are also moved into one `cancel` command by the server, so `cancel(1)`, `cancel(2)`, `cancel(3)` will be just one `cancel(3)`. And finally a matched order pair submission automatically means cancel for all previous orders.    
+Please note that the number of submissions sent to the server is minimized to save gas. As only one order can be active in a reserve session at a time, each order can be represented with a serial number (`in_session_order_index`), the `cancel` command can be represented with just one number: orders up until this number are not active anymore. Multiple fast cancels are also moved into one `cancel` command by the server, so `cancel(1)`, `cancel(2)`, `cancel(3)` will be just one `cancel(3)`. And finally a matched order pair submission automatically means cancel for all previous orders.    
 
 ### Fees
 
