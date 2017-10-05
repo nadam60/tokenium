@@ -2,7 +2,7 @@
 
 **Version 0.2**
 
-Tokenium is a cryptocurrency exchange protocol for ethereum ERC20 tokens. The protocol describes the interaction of a trusted open source trading client software, the trusted an Tokenium smart contract, and an almost trustless exchange server. The protocol makes possible the creation of efficient high-frequency token exchanges where users need to trust the exchange server only in an extremely limited and well-defined manner. It combines the best of both worlds: Seamless real-time trading of centralized exchanges, and the (almost) trustless manner of decentralized exchange protocols.
+Tokenium is a cryptocurrency exchange protocol for ethereum ERC20 tokens. The protocol describes the interaction of a trusted open source trading client software, the trusted Tokenium smart contract, and an almost trustless exchange server. The protocol makes possible the creation of efficient high-frequency token exchanges where users need to trust the exchange server only in an extremely limited and well-defined manner. It combines the best of both worlds: Seamless real-time trading of centralized exchanges, and the (almost) trustless manner of decentralized exchange protocols.
 
 ## Existing Work
 
