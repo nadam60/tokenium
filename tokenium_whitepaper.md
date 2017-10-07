@@ -100,7 +100,7 @@ A honest server also calls the *unreserve* method on the smart contact. (We will
 
 This is done by the client on the smart contract without any server involvement. Usually it is done when the client detects incorrect server behaviour. (The user have the right to initiate this anytime though). It is done in two phases and lasts several ethereum steps so the the server can notice in time when a dishonest client does this and can start not to match its orders before the emergency unreserve is finished.)
 
-### Market Orders, Cancellations and the 'Server Promise List'
+### Market Orders, Cancellations and the 'Submission Promise List'
 
 On the user interface the user makes an order for trading some amount of token `A` for token `B` at a price limit, by digitally signing this data structure (off-chain):
 
